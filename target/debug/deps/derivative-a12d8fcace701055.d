@@ -1,0 +1,15 @@
+/u/tlan2/Rust/Mini_Games/target/debug/deps/libderivative-a12d8fcace701055.so: /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/lib.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/ast.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/attr.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/bound.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/clone.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/cmp.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/debug.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/default.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/hash.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/matcher.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/utils.rs
+
+/u/tlan2/Rust/Mini_Games/target/debug/deps/derivative-a12d8fcace701055.d: /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/lib.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/ast.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/attr.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/bound.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/clone.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/cmp.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/debug.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/default.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/hash.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/matcher.rs /u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/utils.rs
+
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/lib.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/ast.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/attr.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/bound.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/clone.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/cmp.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/debug.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/default.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/hash.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/matcher.rs:
+/u/tlan2/.cargo/registry/src/github.com-1ecc6299db9ec823/derivative-1.0.2/src/utils.rs:
