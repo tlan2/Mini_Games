@@ -1,1 +1,1 @@
-/u/tlan2/Rust/Mini_Games/target/debug/mini_games: /u/tlan2/Rust/Mini_Games/src/draw.rs /u/tlan2/Rust/Mini_Games/src/guessing_game.rs /u/tlan2/Rust/Mini_Games/src/main.rs /u/tlan2/Rust/Mini_Games/src/main_menu.rs /u/tlan2/Rust/Mini_Games/src/snake.rs /u/tlan2/Rust/Mini_Games/src/snake_game.rs /u/tlan2/Rust/Mini_Games/src/snake_wrap.rs
+/u/tlan2/Rust/Mini_Games/target/debug/mini_games: /u/tlan2/Rust/Mini_Games/src/hangman.rs /u/tlan2/Rust/Mini_Games/src/main.rs
