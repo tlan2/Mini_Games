@@ -9,10 +9,11 @@ I used this tutorial as my base and added some new functionalities such as X1, X
 
 
 use std::fs::File;
+use std::io;
 use std::io::prelude::*;
+use std::process;
 use rand::Rng;
 
-use std::io;
 
 const ALLOWED_ATTEMPTS: u8 = 5;
 
@@ -97,7 +98,7 @@ println!("-----------------------------------------------");
         }
     }
 
-    //return_menu()
+    return_menu();
 }
 
 fn select_word() -> String {
@@ -267,4 +268,29 @@ fn hangman_display(turns_left:&u8) {
                 println!("Oh no! Hangman Display Error!");
             }
         }
+}
+
+fn return_menu() {
+    println!("Return Menu:");
+    println!("1. Play Again");
+    //println!("2. Back to Main Menu");
+    println!("2. Quit Mini-Games");
+
+    print!("\nSelection: ");
+    let mut user_input = String::new();
+    let _ = io::stdout().flush();
+    io::stdin().read_line(&mut user_input)
+                .expect("Failed to read line");
+
+    let user_int = user_input.trim().parse::<u32>().unwrap();
+
+    match user_int {
+                1 => hangman(),
+                //2 => main_menu::main_menu(),
+                2 => process::exit(1),
+                _ => {
+                            println!("Error: Enter one of the options above.");
+                            return_menu();
+                }
+    };
 }
