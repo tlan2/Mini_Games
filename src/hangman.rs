@@ -42,18 +42,9 @@ pub fn hangman() {
 |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
                     __/ |                      
                    |___/      ");
-    println!(" 
-       _______
-     |/      |
-     |      (_)
-     |      \\|/
-     |       |
-     |      / \
-     |
-  ___|___
-");
 println!("-----------------------------------------------");
     loop {
+        hangman_display(&turns_left);
         println!("You have {} turns left.", turns_left);
         display_progress(&letters);
 
@@ -90,6 +81,16 @@ println!("-----------------------------------------------");
                 break;
             }
             GameProgress::Lost => {
+                  println!(" 
+       _______
+     |/      |
+     |      (_)
+     |      \\|/
+     |       |
+     |      / \\
+     |
+  ___|___             DEAD!
+");        
                 println!("\nSorry, you lost! The word was {}\n\n", selected_word);
                 break;
             }
@@ -186,4 +187,84 @@ fn check_progress(turns_left: u8, letters:&Vec<Letter>) -> GameProgress {
     }
 
     GameProgress::Lost
+}
+
+fn hangman_display(turns_left:&u8) { 
+    match *turns_left {
+            5 =>{ 
+                    println!(" 
+       _______
+     |/      |
+     |      
+     |  
+     |       
+     |      
+     |
+  ___|___
+");    
+            }
+            4 => {
+                println!(" 
+       _______
+     |/      |
+     |      (_)
+     |       |
+     |       |
+     |       
+     |
+  ___|___
+");
+            }
+            3 => {
+                    println!(" 
+       _______
+     |/      |
+     |      (_)
+     |      \\|
+     |       |
+     |      
+     |
+  ___|___
+");
+            }
+            2 => {
+                println!(" 
+       _______
+     |/      |
+     |      (_)
+     |      \\|/
+     |       |
+     |  
+     |
+  ___|___
+");
+            }
+            1 => {
+                println!(" 
+       _______
+     |/      |
+     |      (_)
+     |      \\|/
+     |       |
+     |      / 
+     |
+  ___|___
+");
+            }
+            0 => {
+                println!(" 
+       _______
+     |/      |
+     |      (_)
+     |      \\|/
+     |       |
+     |      / \\
+     |
+  ___|___             DEAD!
+");
+            }
+            _ => {
+                println!("Oh no! Hangman Display Error!");
+            }
+        }
 }
