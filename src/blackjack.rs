@@ -8,29 +8,42 @@ References:
 -Combined the elements I liked from the above game to create new version
 */
 
-fn main () {
+mod bj;
 
+use bj::deck::Deck;
 
-
-}
-
-fn display_hands(usr: &Player, dlr: &Player) {
-    println!("The dealer:\n? + {}\n", dlr.new_card);
-    println!("You:\n{} + {} = {}\n", usr.hand, usr.new_card, usr.total):
-}
-
-
-fn get_move() -> String {
-    let mut input = String::new();
-
-    //Forces user to choose hit or stand
-    loop{
-        println!("Would you like to (h)it or (s)tand?");
-        io::stdin().read_line(&mut input).ok();
-        input = String::from(input.trim()); //Removes newline from input
-        match input.as_ref() {
-            "h" | "s" => return input,
-                    _ => input = String::new(),
-        }
+pub fn blackjack() {
+    menu();
+    let mut deck = Deck { cards: vec![] };
+    let mut x = 0;
+    /*
+    while x != 6 {
+        deck.make_deck();
+        x += 1;
     }
+    */
+    deck.make_deck();
+    //println!("# cards in deck = {}", deck.cards.len());
+    //println!("Cards before shuffle:\n{:?}",deck.cards);
+    deck.shuffle();
+    //println!("Cards after shuffle:\n{:?}",deck.cards);
+
+}
+
+
+fn menu() {
+    println!("
+
+$$$$$$$   $$                      $$                                    $$
+$$    $$  $$                      $$                                    $$
+$$    $$  $$   $$$$$$    $$$$$$$  $$    $$      $$   $$$$$$    $$$$$$$  $$    $$
+$$$$$$$   $$        $$  $$        $$   $$                 $$  $$        $$   $$
+$$    $$  $$   $$$$$$$  $$        $$$$$$$$      $$  $$$$$$$$  $$        $$$$$$
+$$    $$  $$  $$    $$  $$        $$   $$       $$  $$    $$  $$        $$   $$
+$$$$$$$   $$   $$$$$$$   $$$$$$$  $$    $$      $$  $$$$$$$$   $$$$$$$  $$    $$
+                                                $$
+                                          $$    $$
+                                           $$$$$$
+
+");
 }

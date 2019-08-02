@@ -48,7 +48,7 @@ println!("-----------------------------------------------");
         hangman_display(&turns_left);
         println!("You have {} turns left.", turns_left);
         display_progress(&letters);
-
+        letters_guessed.sort();
         println!("Letters Guessed: {:?}", letters_guessed);
         println!("Please enter a letter to guess:");
         let user_char = read_user_input_character(&mut letters_guessed);
