@@ -27,6 +27,15 @@ impl Deck {
         let mut rng = thread_rng();
         self.cards.shuffle(&mut rng);
     }
+
+    pub fn draw_card(&mut self) -> String {
+        return self.cards.pop().unwrap();
+    }
+
+    /*
+    pub fn deal(&mut self, p1: Player, p2: Player) {
+        //fill in
+    }*/
 }
 
 #[test]
