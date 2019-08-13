@@ -8,10 +8,21 @@
 -Gave me the idea to add more fields to the class
 */
 
-#[derive(Clone, Debug)]
+use crate::blackjack::bj::card::Card;
+
+#[derive(Clone)]
 pub struct Player {
    pub name: String,
-   pub hand: Vec<String>,
-   pub score: u32,
+   pub hand: Vec<Card>,
+   pub total_score: u32,
    pub num_aces: u32
+}
+
+impl Player {
+    pub fn score(&mut self) {
+        self.total_score = 0;
+        for card in &self.hand {
+            self.total_score += card.score();
+        }
+    }
 }

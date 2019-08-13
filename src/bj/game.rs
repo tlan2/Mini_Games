@@ -8,30 +8,45 @@ use crate::blackjack::bj::deck::Deck;
 pub struct Game {
     pub players: Vec<Player>,
     pub deck: Deck,
+    pub user_turn: bool
 }
 
 impl Game {
-    pub fn start_deal(&mut self) {
-        let num_cards = 2;
+    pub fn deal(&mut self) {
+
+        //Adds 2 cards to each player to start game
         for player in &mut self.players {
-            for mut card in 0..2 {
+            for mut _x in 0..2 {
                 let dealt_card = &self.deck.draw_card();
                 player.hand.push(dealt_card.clone());
-                card += 1;
+            }
+        }
+    }
+
+    pub fn display_hands(&mut self) {
+        for player in &mut self.players {
+            println!("{}: ", player.name);
+            for i in 0..player.hand.len() {
+                println!("{} ",player.hand[i].name());
+            }
+            player.score();
+            println!("Total score: {}\n ", player.total_score);
+        }
+    }
+
+   //Deals card to dealer or user if they "hit" 
+    pub fn player_draw_card(&mut self) {
+        for player in &mut self.players {
+            if player.name == "Dealer" && self.user_turn == false {
+                let dealt_card = &self.deck.draw_card();
+                player.hand.push(dealt_card.clone());
+            } else {
+                let dealt_card = &self.deck.draw_card();
+                player.hand.push(dealt_card.clone());
             }
         }
     }
     
-    //pub fn player_draw(&
-
-    pub fn display_hand(&mut self) {
-        let dealer = &self.players.pop().unwrap();
-        let player = &self.players.pop().unwrap();
-        println!("# of cards dealer = {}", dealer.hand.len());
-        println!("# of cards user = {}", player.hand.len());
-        println!("The dealer: \n   ? + {} \n", dealer.hand[0]);
-        println!("You:\n   {} + {} \n", player.hand[0], player.hand[1]);
-    }
 }
 
 
