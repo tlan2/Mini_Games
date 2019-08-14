@@ -4,7 +4,7 @@
 /*
 References:
 1.https://www.youtube.com/watch?v=omLBlUWfxO0&list=PLVvjrrRCBy2Igh_kCtvRr2Np4fMRawn6x
-I used this tutorial as my base and added some new functionalities such as X1, X2, and X3.
+I used this tutorial as my base and added some new functionalities such as letters_guessed array, hangman visual aid, and menu.
 */
 
 
