@@ -2,24 +2,69 @@
 # Tom Lancaster (c) Summer 2019
 
 # Mini-Games
-A few mini-games like Blackjack and Memory Puzzler/Trainer in Rust. 
 
 ## Project Description
   
-  This project for CS410/510 Rust will be a few mini-games like Blackjack and Memory Puzzler/Trainer. 
-  By making these games, I'll develop my skills in Rust and become more fluent in the language. 
-  to become more familiar with the Rust Programming Language. I plan on making Blackjack with a simple AI that 
-  follows the typical house rules of a casino. The Memory Puzzler/Trainer is a simple matching game that matches 
-  the same characters. I plan on using a command-line interface for these games unless I find a few crates that
-  could enhance the games. If time permits, I will add 2-player Tic-Tac-Toe and Connect Four. 
+A Mini-Game arcade of 4 games. The games are guessing number game, snake, hangman, and blackjack. By making these games, I developed my skills in Rust and become more fluent in the language. 
+
+###Guessing Number Game
+GAME PREMISE
+Guess the randomly chosen number between 1 and 100 in 5 guesses.
+
+REFERENCES
+1. https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html
+
+BACKLOG
+1. Return to main menu option
+
+###Snake
+GAME PREMISE
+Classic snake game where snake eats the apple and slowly grows.
+
+REFERENCES
+1. https://www.youtube.com/watch?v=DnT_7M7L7vo
+
+BACKLOG
+1. Return Menu
+
+###Hangman
+GAME PREMISE
+User guesses the word before they run out of guesses and kill their "hangman."
+
+REFERENCES
+1. https://github.com/dcode-youtube/hangman-rust
+
+BACKLOG
+1. Take in whole phrases and not just words
+2. Return to main menu option
+
+###Blackjack
+GAME PREMISE
+Standard blackjack except for multiple Aces game logic.
+
+References:
+1. https://github.com/chrisccerami/rust-blackjack/src
+2. https://github.com/seifriedc/blackjack-rust/tree/master/src
+
+BACKLOG
+1. Multiple Aces logic
+2. Return to main menu option
+
 
 ## Example GameplayImages
   
-  These images were taken from google searches. I plan to imitate the look even if it is within the simpler
-  command line interface.
-
-
-![Example](images/blackjack.png)
+  These images were taken from actual gameplay
+### Guessing Game
+IMAGE
+![Example](images/memory_puzzler.png)
+### Snake
+IMAGE
+![Example](images/memory_puzzler.png)
+### Hangman
+IMAGE
+![Example](images/memory_puzzler.png)
+### Blackjack
+IMAGE
 ![Example](images/memory_puzzler.png)
 
 ## License Information
