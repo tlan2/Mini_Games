@@ -14,15 +14,15 @@ use crate::blackjack::bj::card::Card;
 pub struct Player {
    pub name: String,
    pub hand: Vec<Card>,
-   pub total_score: u32,
    pub num_aces: u32
 }
 
 impl Player {
-    pub fn score(&mut self) {
-        self.total_score = 0;
+    pub fn score(&mut self) -> u32 {
+        let mut score = 0;
         for card in &self.hand {
-            self.total_score += card.score();
+            score += card.score();
         }
+        score
     }
 }

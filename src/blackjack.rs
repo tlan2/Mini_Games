@@ -21,8 +21,8 @@ pub fn blackjack() {
     
     let mut deck = Deck { cards: vec![] };
     //Create players for game
-    let mut dealer = Player{name: "Dealer".into(), hand: vec![], total_score: 0, num_aces: 0};
-    let mut user = Player{name: "You".into(), hand: vec![], total_score: 0, num_aces: 0}; 
+    let mut dealer = Player{name: "Dealer".into(), hand: vec![], num_aces: 0};
+    let mut user = Player{name: "You".into(), hand: vec![], num_aces: 0}; 
     let mut user_turn = true;
 
     deck.make_deck();
@@ -38,7 +38,7 @@ pub fn blackjack() {
             draw_card(&mut deck,&mut user);
             display_hands(&mut user, &mut dealer);
 
-            if dealer.total_score > 21 {
+            if dealer.score() > 21 {
                 println!("BUSTED! \nYou busted. Dealer wins. :-(");
                 return;
                 //return_menu(deck)
@@ -47,14 +47,14 @@ pub fn blackjack() {
             input = get_move();
             if input == "stand" { user_turn = false; }
         }
-        if dealer.total_score >= 17 {
+        if dealer.score() >= 17 {
             // Determing who wins if no one busts
             println!("Dealer stands.\n");
             display_hands(&mut user, &mut dealer);
 
-            if dealer.total_score > user.total_score {
+            if dealer.score() > user.score() {
                 println!("Dealer wins.\n");
-            } else if dealer.total_score < user.total_score {
+            } else if dealer.score() < user.score() {
                 println!("You win!\n");
             } else {
                 println!("Tie! (Push)\n");
@@ -63,12 +63,12 @@ pub fn blackjack() {
             return;
         } else {
             // Dealer's turn - loop
-            while dealer.total_score < 17 {
+            while dealer.score() < 17 {
                 println!("\nDealer hits.\n");
                 draw_card(&mut deck,&mut user);
                 display_hands(&mut user, &mut dealer);
                 // The dealer busts
-                if dealer.total_score > 21 {
+                if dealer.score() > 21 {
                     display_hands(&mut user, &mut dealer);
                     println!("BUSTED!\n\n");
                     println!("The dealer busted. You win!\n");
@@ -100,15 +100,13 @@ fn display_hands(usr: &mut Player, dlr: &mut Player) {
     for i in 0..dlr.hand.len() {
         println!("{} ",dlr.hand[i].name());
     }
-    dlr.score();
-    println!("Total score: {}\n ", dlr.total_score);
+    println!("Total score: {}\n ", dlr.score());
     
     println!("{}: ", usr.name);
     for i in 0..usr.hand.len() {
         println!("{} ",usr.hand[i].name());
     }
-    usr.score();
-    println!("Total score: {}\n ", usr.total_score);
+    println!("Total score: {}\n ", usr.score());
 }
 
 fn get_move() -> String {
