@@ -3,7 +3,7 @@ Tom Lancaster (c) Summer 2019
 
 ## Project Description
   
-A Mini-Game arcade of 4 games. The games are guessing number game, snake, hangman, and blackjack. Clone the repository and "cargo build" or "cargo run" to start the program. 
+A mini-arcade of 4 games. The games are guessing number game, snake, hangman, and blackjack. Clone the repository and "cargo build" or "cargo run" to start the program. 
 
 ![Example](images/main_menu.png)
 
@@ -35,7 +35,7 @@ User guesses the letters of a word in 5 guesses. If they fail to guess correctly
 2. Return to main menu option
 
 ### Blackjack
-This version of blackjack, also known as 21, uses 1 deck and only has 2 players - you and the dealer. Aces are only scored as 11 instead of switching to 11. Dealer finishes hand after you finish your hand just like in a casino setting.
+This version of blackjack, also known as 21, uses 1 deck and only has 2 players - you and the dealer. Aces are only scored as 11 instead of switching to 1 if multiple aces are present. Dealer finishes hand after you finish your hand just like in a casino setting.
 
 ![Example](images/blackjack1.png)
 ![Example](images/blackjack2.png)
