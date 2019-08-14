@@ -1,14 +1,8 @@
 // Tom Lancaster (c) Summer 2019
 //
 // Blackjack - player.rs
-/* Reference:
-1. https://github.com/chrisccerami/rust-blackjack/blob/master/src/blackjack/player.rs
--Used code as a base to make Player object class
-2. https://github.com/seifriedc/blackjack-rust/blob/master/src/main.rs
--Gave me the idea to add more fields to the class
-*/
 
-use crate::blackjack::bj::card::Card;
+use crate::main_menu::blackjack::bj::card::Card;
 
 #[derive(Clone)]
 pub struct Player {

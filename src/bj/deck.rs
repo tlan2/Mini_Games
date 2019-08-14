@@ -4,7 +4,7 @@
 
 use rand::thread_rng;
 use rand::seq::SliceRandom;
-use crate::blackjack::bj::card::Card;
+use crate::main_menu::blackjack::bj::card::Card;
 
 #[derive(Clone)]
 pub struct Deck {
