@@ -4,6 +4,7 @@
 
 
 use std::io::{self, Write};
+use std::process;
 
 #[path = "guessing_game.rs"] mod guessing_game;
 #[path = "snake/snake.rs"] mod snake;
@@ -27,6 +28,7 @@ println!("----------------------------------------------------------------------
     println!("2. Snake");
     println!("3. Blackjack");
     println!("4. Hangman");
+    println!("5. Quit");
 
     let input = &mut String::new();
     print!("Enter a number: ");
@@ -39,6 +41,7 @@ println!("----------------------------------------------------------------------
         "2" => snake::snake(),
         "3" => blackjack::blackjack(),
         "4" => hangman::hangman(),
+        "5" => process::exit(1), 
          _  => {
                 println!("Not a valid selection. Please pick another number.");
                 main_menu();

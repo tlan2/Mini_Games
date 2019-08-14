@@ -45,7 +45,7 @@ pub fn hangman() {
                    |___/      ");
 println!("-----------------------------------------------");
     loop {
-        hangman_display(&turns_left);
+        hangman_display(turns_left);
         println!("You have {} turns left.", turns_left);
         display_progress(&letters);
         letters_guessed.sort();
@@ -120,7 +120,7 @@ fn select_word() -> String {
     String::from(available_words[ind])
 }
 
-fn create_letters(word: &String) -> Vec<Letter> {
+fn create_letters(word: &str) -> Vec<Letter> {
     // Create empty vector for letters
     let mut letters: Vec<Letter> = Vec::new();
 
@@ -134,7 +134,7 @@ fn create_letters(word: &String) -> Vec<Letter> {
     letters
 }
 
-fn display_progress(letters: &Vec<Letter>) {
+fn display_progress(letters: &[Letter]) {
     let mut display_string = String::from("Progress:");
     
     //Display appropriate character (letter or _) for each letter
@@ -160,17 +160,16 @@ fn read_user_input_character(letters_guessed:&mut Vec<char>) -> char {
     match io::stdin().read_line(&mut user_input) {
         Ok(_) => {
             match user_input.chars().next() {
-                Some(c) => { 
-                                letters_guessed.push(c);
-                                return c; }
-                None => { return '*'; }
+                Some(c) => { letters_guessed.push(c);
+                             c }
+                None => { '*' }
             }
         }
-        Err(_) => { return '*'; }
+        Err(_) => { '*' }
     }
 }
 
-fn check_progress(turns_left: u8, letters:&Vec<Letter>) -> GameProgress {
+fn check_progress(turns_left: u8, letters:&[Letter]) -> GameProgress {
     //Determine if all letters have been revealed
     let mut all_revealed = true;
     for letter in letters {
@@ -190,8 +189,8 @@ fn check_progress(turns_left: u8, letters:&Vec<Letter>) -> GameProgress {
     GameProgress::Lost
 }
 
-fn hangman_display(turns_left:&u8) { 
-    match *turns_left {
+fn hangman_display(turns_left:u8) { 
+    match turns_left {
             5 =>{ 
                     println!(" 
        _______

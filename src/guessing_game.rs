@@ -62,7 +62,7 @@ pub fn guessing_game() {
         }
 
     }
-    if guess_count == 0 && win == true {
+    if guess_count == 0 && win {
             return_menu_gg();
     } else{ 
             println!("The correct number was {}.", secret_number);
@@ -88,7 +88,6 @@ fn return_menu_gg() {
 
     match user_int {
                 1 => guessing_game(),
-                //2 => main_menu::main_menu(),
                 2 => process::exit(1),
                 _ => {
                             println!("Error: Enter one of the options above.");
